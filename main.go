@@ -201,8 +201,8 @@ func main() {
 		xcodeBuildCmd.SetScheme(cfg.Scheme)
 		xcodeBuildCmd.SetConfiguration(cfg.Configuration)
 
-		// Disable the code signing for simulator build
-		xcodeBuildCmd.SetDisableCodesign(true)
+		// Enable the code signing for simulator build
+		xcodeBuildCmd.SetDisableCodesign(false)
 
 		// Set simulator destination and disable code signing for the build
 		xcodeBuildCmd.SetDestination("id=" + simulatorID)
